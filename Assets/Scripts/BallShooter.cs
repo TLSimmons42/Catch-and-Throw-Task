@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BallShooter : MonoBehaviour
 {
+
     public GameObject ballPrefab;
     public float shootForce = 10.0f;
-
-    public Transform target_1;
-    public Transform target_2;
 
     public float timer = 0f;
 
     public bool shoot = true;
+
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -23,21 +23,22 @@ public class BallShooter : MonoBehaviour
             Debug.Log(temp);
             if (temp == 0)
             {
-                ShootBall(target_1);
+                ShootBall();
             }
             else
             {
-                ShootBall(target_2);
+                ShootBall();
             }
             timer = 0;
         }
 
     }
 
-    void ShootBall(Transform pos)
+    void ShootBall()
     {
         // Spawn a ball and apply force in the shoot direction
         GameObject ball = Instantiate(ballPrefab, transform.position, Quaternion.identity);
-        ball.GetComponent<BallMovement>().target = pos;
+        Vector3 ballTargetPos = GameManager.instance.CatchTrial();
+        ball.GetComponent<BallMovement>().target = ballTargetPos;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour
 {
-    public Transform target;
+    public Vector3 target;
     public float speed = 5.0f;
     float t;
 
@@ -14,15 +14,15 @@ public class BallMovement : MonoBehaviour
     private void Start()
     {
         startPos = transform.position;
-        yOffset = new Vector3(2, -2, 0);
+        yOffset = new Vector3(0, -2, 0);
     }
 
     private void Update()
     {
         t = (t + Time.deltaTime);
-        transform.position = Vector3.Slerp(startPos - yOffset, target.position - yOffset, t/speed);
+        transform.position = Vector3.Slerp(startPos - yOffset, target - yOffset, t/speed);
         transform.position += yOffset;
-        if(transform.position == target.position)
+        if(transform.position == target)
         {
             Destroy(gameObject);
         }
