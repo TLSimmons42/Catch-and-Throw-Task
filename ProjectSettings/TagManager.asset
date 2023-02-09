@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - right hand
+  - left hand
+  - ball
   layers:
   - Default
   - TransparentFX

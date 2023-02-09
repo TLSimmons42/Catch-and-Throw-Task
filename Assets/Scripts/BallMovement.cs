@@ -27,4 +27,13 @@ public class BallMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Right Hand" || other.gameObject.tag == "Left Hand")
+        {
+            Destroy(gameObject);
+            Debug.Log("caught the ball");
+        }
+    }
 }
