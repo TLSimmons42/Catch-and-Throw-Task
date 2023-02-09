@@ -81,13 +81,13 @@ public class GameManager : Singleton<GameManager>
 
 
         // Calculate the Pos of the Targets for the ball flight
-        //rightSideTestTarget1.transform.position = calculateTargetPos(1, 0, 0);
-        //rightSideTestTarget2.transform.position = calculateTargetPos(1, 1, 1);
-        //rightSideTestTarget3.transform.position = calculateTargetPos(1, 2, 2);
+        rightSideTestTarget1.transform.position = calculateTargetPos(1, 0, 0);
+        rightSideTestTarget2.transform.position = calculateTargetPos(1, 1, 1);
+        rightSideTestTarget3.transform.position = calculateTargetPos(1, 2, 2);
 
-        //leftSideTestTarget1.transform.position = calculateTargetPos(0, 0, 1);
-        //leftSideTestTarget2.transform.position = calculateTargetPos(0, 1, 1);
-        //leftSideTestTarget3.transform.position = calculateTargetPos(0, 2, 1);
+        leftSideTestTarget1.transform.position = calculateTargetPos(0, 0, 1);
+        leftSideTestTarget2.transform.position = calculateTargetPos(0, 1, 1);
+        leftSideTestTarget3.transform.position = calculateTargetPos(0, 2, 1);
 
     }
 
