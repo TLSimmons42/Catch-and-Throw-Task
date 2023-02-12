@@ -1906,6 +1906,8 @@ MonoBehaviour:
   throwBallSpawnPos: {fileID: 169021925}
   throwBall: {fileID: 8794296351419868599, guid: b2d6828127d9d7949bb0491091fc1cce,
     type: 3}
+  throwBallTarget: {fileID: 3238256387402541920, guid: 6f707fd8c3529a344bc01a3b31137e38,
+    type: 3}
   head: {fileID: 2033277805}
   rightHand: {fileID: 1745805360}
   leftHand: {fileID: 31790377}
@@ -3999,7 +4001,7 @@ GameObject:
   m_Component:
   - component: {fileID: 972125567}
   m_Layer: 0
-  m_Name: Ball Targets
+  m_Name: Catch Ball Targets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5352,7 +5354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316591846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aca231c3681b25348a5f31de205600a5, type: 3}
   m_Name: 
@@ -6644,7 +6646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1588236088
 Transform:
   m_ObjectHideFlags: 0
@@ -8762,7 +8764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1799939257
 Transform:
   m_ObjectHideFlags: 0

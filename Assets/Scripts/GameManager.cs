@@ -8,6 +8,7 @@ public class GameManager : Singleton<GameManager>
 
     public GameObject throwBallSpawnPos;
     public GameObject throwBall;
+    public GameObject throwBallTarget;
 
     public GameObject head;
     public GameObject rightHand;
@@ -70,6 +71,7 @@ public class GameManager : Singleton<GameManager>
             throwHandRight.SetActive(true);
             throwHandLeft.SetActive(true);
             SpawnBall();
+            SpawnThrowBallTarget();
         }
     }
 
@@ -170,5 +172,22 @@ public class GameManager : Singleton<GameManager>
     public void SpawnBall()
     {
         Instantiate(throwBall, throwBallSpawnPos.transform.position, Quaternion.identity);
+    }
+    public void SpawnThrowBallTarget()
+    {
+        float x = Random.Range(-3f, 4f);
+        float z = Random.Range(1f, 5f);
+        Vector3 pos = new Vector3(x, 0.02f, z);
+        Instantiate(throwBallTarget, pos, Quaternion.identity);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("throw ball"))
+        {
+            Debug.Log("target hit");
+            SpawnThrowBallTarget();
+            Destroy(gameObject);
+        }
     }
 }

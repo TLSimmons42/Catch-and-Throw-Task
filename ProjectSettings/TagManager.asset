@@ -9,6 +9,8 @@ TagManager:
   - right hand
   - left hand
   - ball
+  - Throw Target
+  - throw ball
   layers:
   - Default
   - TransparentFX
