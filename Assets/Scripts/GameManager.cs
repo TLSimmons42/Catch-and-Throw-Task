@@ -181,13 +181,4 @@ public class GameManager : Singleton<GameManager>
         Instantiate(throwBallTarget, pos, Quaternion.identity);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.CompareTag("throw ball"))
-        {
-            Debug.Log("target hit");
-            SpawnThrowBallTarget();
-            Destroy(gameObject);
-        }
-    }
 }

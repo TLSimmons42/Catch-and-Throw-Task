@@ -7,12 +7,15 @@ public class ThrowBall : XRGrabInteractable
 {
 
     Rigidbody rb;
+    SphereCollider col;
     public bool isHeld = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<SphereCollider>();
+
         rb.isKinematic = true;
     }
 
@@ -38,6 +41,7 @@ public class ThrowBall : XRGrabInteractable
     protected override void OnSelectExited(SelectExitEventArgs args)
     {
         rb.isKinematic = false;
+        col.isTrigger = true;
 
         Debug.Log(args.interactorObject.transform.gameObject.name);
         if (args.interactorObject.transform.gameObject.CompareTag("Right Hand") || args.interactorObject.transform.gameObject.CompareTag("Left Hand"))

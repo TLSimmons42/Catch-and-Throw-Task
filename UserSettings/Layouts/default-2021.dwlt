@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 43
+  controlID: 69
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 52
+  controlID: 78
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 86
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 512
     height: 907
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -498,7 +498,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 285
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -546,13 +546,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Trent Simons\Desktop\Game Development\Catch and Throw
     Assesment
@@ -560,9 +560,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 32}
-    m_SelectedIDs: 2e870000
-    m_LastClickedID: 34606
-    m_ExpandedIDs: 000000002e870000328700003487000036870000388700003a8700003c8700003e87000040870000428700004487000046870000488700004a8700004c87000000ca9a3b
+    m_SelectedIDs: 6c870000
+    m_LastClickedID: 34668
+    m_ExpandedIDs: 000000003c8700003e87000040870000428700004487000046870000488700004a8700004c8700004e870000508700005287000054870000568700005887000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,7 +590,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002e87000030870000328700003487000036870000388700003a8700003c8700003e87000040870000428700004487000046870000488700004a8700004c870000
+    m_ExpandedIDs: 000000003c8700003e87000040870000428700004487000046870000488700004a8700004c8700004e8700005087000052870000548700005687000058870000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -956,7 +956,7 @@ MonoBehaviour:
       index: 10
       layout: 4
   m_WindowGUID: e073121b2e1a9664eb51c6490873465e
-  m_Gizmos: 0
+  m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -1018,9 +1018,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.13881226, y: 0.21851847, z: -0.031421985, w: -0.96539813}
   m_Size:
-    m_Target: 5.2196693
+    m_Target: 0.5347548
     speed: 2
-    m_Value: 5.2196693
+    m_Value: 0.5347548
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1077,9 +1077,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 30030000
-      m_LastClickedID: 0
-      m_ExpandedIDs: fafaffffe0790000ec790000187b0000
+      m_SelectedIDs: 607b0000
+      m_LastClickedID: 31584
+      m_ExpandedIDs: fafaffff187b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
