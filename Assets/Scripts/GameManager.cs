@@ -6,9 +6,17 @@ using Doozy.Engine.UI;
 public class GameManager : Singleton<GameManager>
 {
 
+    public GameObject throwBallSpawnPos;
+    public GameObject throwBall;
+
     public GameObject head;
     public GameObject rightHand;
     public GameObject leftHand;
+
+    public GameObject throwHandRight;
+    public GameObject throwHandLeft;
+    public GameObject catchHandRight;
+    public GameObject catchHandLeft;
 
     public UIView calibrationUI;
 
@@ -31,7 +39,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject leftSideTestTarget3;
 
 
-
+    public bool spawnball = false;
 
 
 
@@ -45,16 +53,24 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            Debug.Log("right hand Pos: " + rightHand.transform.position);
-            Debug.Log("left hand Pos: " + leftHand.transform.position);
-            Debug.Log("head Pos: " + head.transform.position);
+            spawnball = false;
+            catchHandRight.SetActive(true);
+            catchHandLeft.SetActive(true);
+            throwHandRight.SetActive(false);
+            throwHandLeft.SetActive(false);
 
-            AssignTPos();
         }
-
-        AssignTPos();
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            spawnball = true;
+            catchHandRight.SetActive(false);
+            catchHandLeft.SetActive(false);
+            throwHandRight.SetActive(true);
+            throwHandLeft.SetActive(true);
+            SpawnBall();
+        }
     }
 
     public void StartCalibration()
@@ -149,5 +165,10 @@ public class GameManager : Singleton<GameManager>
 
         return targetPos;
 
+    }
+
+    public void SpawnBall()
+    {
+        Instantiate(throwBall, throwBallSpawnPos.transform.position, Quaternion.identity);
     }
 }

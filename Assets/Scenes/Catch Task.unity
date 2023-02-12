@@ -753,7 +753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &58441640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,6 +1281,37 @@ Transform:
   m_Father: {fileID: 1117388915}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &169021925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 169021926}
+  m_Layer: 0
+  m_Name: Throw Ball Spawn Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &169021926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169021925}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.644}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033277808}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218557216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,12 +1394,12 @@ GameObject:
   - component: {fileID: 243327523}
   - component: {fileID: 243327522}
   m_Layer: 0
-  m_Name: Right Hand Catcher
+  m_Name: Right Catch Hand
   m_TagString: Right Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &243327519
 Transform:
   m_ObjectHideFlags: 0
@@ -1795,7 +1826,7 @@ PrefabInstance:
     - target: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364,
         type: 3}
       propertyPath: m_Name
-      value: Right Hand Model
+      value: Right Throw Hand
       objectReference: {fileID: 0}
     - target: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364,
         type: 3}
@@ -1872,9 +1903,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Persistent: 0
+  throwBallSpawnPos: {fileID: 169021925}
+  throwBall: {fileID: 8794296351419868599, guid: b2d6828127d9d7949bb0491091fc1cce,
+    type: 3}
   head: {fileID: 2033277805}
   rightHand: {fileID: 1745805360}
   leftHand: {fileID: 31790377}
+  throwHandRight: {fileID: 974368310}
+  throwHandLeft: {fileID: 1281821156}
+  catchHandRight: {fileID: 243327518}
+  catchHandLeft: {fileID: 668784396}
   calibrationUI: {fileID: 0}
   chestCenterPos: {x: 0, y: 0, z: 0}
   chestCenter: {fileID: 31830265}
@@ -1888,6 +1926,7 @@ MonoBehaviour:
   leftSideTestTarget1: {fileID: 370207599}
   leftSideTestTarget2: {fileID: 733509658}
   leftSideTestTarget3: {fileID: 943054547}
+  spawnball: 0
 --- !u!4 &377221022
 Transform:
   m_ObjectHideFlags: 0
@@ -2846,12 +2885,12 @@ GameObject:
   - component: {fileID: 668784401}
   - component: {fileID: 668784400}
   m_Layer: 0
-  m_Name: Left Hand Catcher
+  m_Name: Left Catch Hand
   m_TagString: left hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &668784397
 Transform:
   m_ObjectHideFlags: 0
@@ -4618,7 +4657,7 @@ PrefabInstance:
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
       propertyPath: m_Name
-      value: Left Hand Model
+      value: Left Throw Hand
       objectReference: {fileID: 0}
     - target: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b,
         type: 3}
@@ -10505,7 +10544,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 169021926}
   m_Father: {fileID: 666258204}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11167,7 +11207,7 @@ MonoBehaviour:
     type: 3}
   shootForce: 10
   timer: 0
-  shoot: 1
+  shoot: 0
 --- !u!65 &2085637388
 BoxCollider:
   m_ObjectHideFlags: 0

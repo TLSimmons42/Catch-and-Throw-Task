@@ -10,13 +10,21 @@ public class BallShooter : MonoBehaviour
 
     public float timer = 0f;
 
-    public bool shoot = true;
+    public bool shoot = false;
 
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            shoot = true;
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            shoot = false;
+        }
         timer += Time.deltaTime;
-        if (timer >= 2 & shoot)
+        if (timer >= 2 && shoot)
         {
             //shoot = false;
             int temp = Random.Range(0, 2);
