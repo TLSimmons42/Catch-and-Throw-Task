@@ -1908,6 +1908,8 @@ MonoBehaviour:
     type: 3}
   throwBallTarget: {fileID: 3238256387402541920, guid: 6f707fd8c3529a344bc01a3b31137e38,
     type: 3}
+  throwBallTargetMoving: {fileID: 4762623567127346629, guid: be09308d42bfb334f934ac6d4f1c556d,
+    type: 3}
   head: {fileID: 2033277805}
   rightHand: {fileID: 1745805360}
   leftHand: {fileID: 31790377}
@@ -5056,7 +5058,7 @@ MonoBehaviour:
   m_OriginBaseGameObject: {fileID: 1316591846}
   m_CameraFloorOffsetObject: {fileID: 666258203}
   m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.1176
+  m_CameraYOffset: 0.1176
 --- !u!4 &1316591848
 Transform:
   m_ObjectHideFlags: 0

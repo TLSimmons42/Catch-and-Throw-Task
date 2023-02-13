@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
     public GameObject throwBallSpawnPos;
     public GameObject throwBall;
     public GameObject throwBallTarget;
+    public GameObject throwBallTargetMoving;
+
 
     public GameObject head;
     public GameObject rightHand;
@@ -73,6 +75,17 @@ public class GameManager : Singleton<GameManager>
             SpawnBall();
             SpawnThrowBallTarget();
         }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            spawnball = true;
+            catchHandRight.SetActive(false);
+            catchHandLeft.SetActive(false);
+            throwHandRight.SetActive(true);
+            throwHandLeft.SetActive(true);
+            SpawnBall();
+            SpawnMovingThrowBallTarget();
+        }
+        AssignTPos();
     }
 
     public void StartCalibration()
@@ -106,6 +119,7 @@ public class GameManager : Singleton<GameManager>
         //leftSideTestTarget1.transform.position = calculateTargetPos(0, 0, 1);
         //leftSideTestTarget2.transform.position = calculateTargetPos(0, 1, 1);
         //leftSideTestTarget3.transform.position = calculateTargetPos(0, 2, 1);
+        
 
     }
 
@@ -179,6 +193,13 @@ public class GameManager : Singleton<GameManager>
         float z = Random.Range(1f, 5f);
         Vector3 pos = new Vector3(x, 0.02f, z);
         Instantiate(throwBallTarget, pos, Quaternion.identity);
+    }
+    public void SpawnMovingThrowBallTarget()
+    {
+        float x = Random.Range(-3f, 4f);
+        float z = Random.Range(1f, 5f);
+        Vector3 pos = new Vector3(x, 0.02f, z);
+        Instantiate(throwBallTargetMoving, pos, Quaternion.identity);
     }
 
 }
